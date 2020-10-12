@@ -27,8 +27,6 @@ function controlRecording(key) {
         mediaRecorder.ondataavailable = function(event){
           if (event.data.size > 0) {
             recordedChunks.push(event.data);
-          } else {
-            console.log(event);
           }
         };
 
@@ -50,9 +48,9 @@ function controlRecording(key) {
       track.stop();
     });
 
-    var blob = new Blob(recordedChunks, {
-      type: 'video/webm'
-    });
+    var blob = new Blob(recordedChunks, {'type' : 'video/webm;' });
+    
+    recordedChunks = [];
 
     var url = URL.createObjectURL(blob);
     downloadVideo.href = url;
