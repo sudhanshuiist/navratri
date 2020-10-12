@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180150140-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180150140-1');
+</script>
+
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hide & Seek with Ganesha</title>
+</head>
+<body onload="load_video()">
+    <main class="challenge-background">
+        <div class="content">
+            <div id="video" class="recorded">
+                <video id="recordedVideo" src="" controls autoplay></video>
+            </div>
+            <div id="container" class="recording">
+                <video id="videoElement" style="border: solid;"></video>
+            </div>
+            <div id="snap-div" class="snap-div">
+                <button onclick="controlRecording(0)" id="startRecording" style="width:150px">Start</button>
+                <button onclick="controlRecording(1)" id="stopRecording" style="width:150px">Stop</button>
+                <img src="images/retake.png" id="retake" class="retake" onClick="retake()"></img>
+                <img src="images/fbshare.png" id="sharefb" class="sharefb" onclick="shareToFacebook();"></img>
+            </div>
+            <a id="downloadVideo" href="" download></a>
+        </div>
+		
+    </main>
+    <script src="js/camerascript.js"></script>
+</body>

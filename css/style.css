@@ -1,0 +1,419 @@
+@font-face{
+    font-family: enchanting;
+    src: url(../fonts/EnchantingCelebrations.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: proximanova;
+    src: url(../fonts/proximanova/proximanova-reg-webfont.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: proximanovabold;
+    src: url(../fonts/proximanova/proximanova-bold-webfont.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: camphor;
+    src: url(../fonts/camphor/CamphorPro-Regular.OTF) format("opentype");
+}
+
+body{
+    margin: 0;
+    background:#f9e2d3;
+    font-family: proximanova;
+}
+
+.main_image{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: capitalize;
+    color: #8a0404;
+    font-family: proximanovabold;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-transform: capitalize;
+    margin: 0;
+    color: #8a0404; 
+}
+
+.results{
+    display:none
+}
+
+main{
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+    -30px 0 40px rgba(0,0,0,0.1);
+    height: 100vh;
+}
+
+
+
+.icon-image{
+    width:90%;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recording{
+    flex:1
+}
+
+.recorded{
+    flex:1;
+    width:100%;
+    height: 100%;
+}
+
+
+.header{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-header{
+    display: flex;
+    height: 50%;
+}
+
+.header div{
+    padding:0.5rem;
+}
+
+.main-content {
+    margin-top: 15rem;
+}
+
+.main {
+    height: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.landing-image{
+    flex:1;
+    order:2;
+    align-self: center;
+    padding:0.125rem;
+}
+
+.landing-text{
+    flex:9;
+    order:1;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.game{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-tile{
+    flex:1;
+    text-align: center;
+    padding:0.5rem;
+}
+
+.tile{
+    width: 70%;
+}
+
+.main{
+    display: flex;
+}
+
+.ganesha{
+    flex: 1;
+   text-align: center;
+   padding: 1vh;
+   align-self:center;
+}
+
+
+.ganesha-image{
+    width: 80%;
+}
+
+.durga{
+    flex:3;
+    padding:1vh;
+    
+}
+
+.durga-image{
+    width:80%
+}
+
+.play{
+    width:30%
+}
+
+#container {
+	margin: 0px auto;
+	width: 100%;
+    height: 100%;
+    flex:1;
+	/*border: 10px #333 solid;*/
+}
+#videoElement {
+    width: 100% !important;
+    height: 40vh;
+    
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+	/*background-color: #666;*/
+}
+
+#recordedVideo {
+    width: 100% !important;
+    height: 40vh;
+}
+
+.frontpage{
+    height: fit-content;
+}
+
+.footer{
+    padding-top:1rem;
+    text-align: center;
+    padding-bottom: 0rem;
+    height: 15vh;
+}
+
+.footer-text{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.bg-image{
+    width:100%;
+    height: 100%;
+}
+
+.challenge-background{
+        background: linear-gradient(rgba(255, 255,255, 0.1), rgba(255, 255, 255, 0.1)),url("../images/bg2.jpg") no-repeat center center;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+        background-position: center;
+        overflow: scroll;
+}
+
+.background-index{
+    background: linear-gradient(rgba(255, 255,255, 0.1), rgba(255, 255, 255, 0.1)),url("../images/bg.jpg") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: scroll;
+}
+.snap{
+    width: 40%;
+    flex:1;
+    order:1;
+}
+
+.snap-div{
+    height:10vh;
+    display: flex;
+    text-align: center;
+}
+
+.sharefb{
+    width: 40%;
+    flex:1;
+    order:1;
+}
+
+.retake{
+    width: 40%;
+}
+
+.share-socialmedia{
+    text-align: center;
+}
+
+.filter{
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.filter-image-div{
+    flex:1;
+    align-self: center;
+}
+
+.filter-image{
+    width:100%
+}
+
+.filter-title{
+    flex:4;
+    align-self: center;
+}
+
+.filter-link{
+    flex:1;
+    align-self: center;
+}
+
+.link-image{
+    width:100%
+}
+
+.line{
+    height: 47px;
+    border-bottom: 4px solid #8a0404;
+    flex: auto;
+    }
+
+.playButton{
+    width: 40%
+}
+
+video {
+  }
+
+@media only screen and (min-width: 530px){
+    main{
+        max-width: 500px;
+    margin: auto;
+    box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+    -30px 0 40px rgba(0,0,0,0.1);
+        height: 100vh;
+    }
+
+    .main-content {
+        margin-top: 15rem;
+    }
+   
+    .main {
+        height: 50%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .play{
+        width:30%
+    }
+    
+}
+
+@media only screen and (max-width: 450px){
+	
+h1{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0;
+    text-transform: capitalize;
+    color: #8a0404;
+    font-family: proximanovabold;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin: 0;
+    color: #8a0404; 
+}
+	
+.icon-image{
+    width:90%;
+}
+
+.header{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header div{
+    padding:0rem;
+}
+
+.main-content {
+    margin-top: 13rem;
+}
+
+.main {
+    height: 50%;
+}
+	
+.footer{
+    padding-bottom: 1rem;
+    padding-top: 0rem;
+}
+
+.landing-image{
+    flex:1;
+    order:2;
+    align-self: center;
+    padding:0.125rem;
+}
+
+.landing-text{
+    flex:5;
+    order:1;
+    text-align: center;
+    line-height: 2rem;
+}
+	
+.game{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-tile{
+    flex:1;
+    text-align: center;	
+    padding: 5px;
+}
+
+.filter{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.line{
+    height: 20px;
+    border-bottom: 4px solid #8a0404;
+    flex: auto;
+    }
+
+#container {
+    margin-top: 2rem;
+}
+    
+
+
+}
+

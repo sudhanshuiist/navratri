@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Hide & Seek with Ganesha</title>
+</head>
+<body>
+    <main>
+        <div id="container" class="container mx-auto text-center">
+
+            <video autoplay="true" id="videoElement"></video>
+            <canvas id="canvas" width="640" height="480"></canvas>
+
+            <div class="pt-4">
+                <button class="btn btn-primary w-50 py-3 mb-3" id="snap" onclick="snap();">Take a Snap</button>
+                <button class="btn btn-primary w-50 py-3 mb-3" id="shareToFacebook" onclick="shareToFacebook();">Share to facebook</button>
+                <button class="btn btn-warning w-50 py-3 mb-3" id="retake" onclick="retake();">Retake Photo</button>
+            </div>
+            <a id="snapped_pic" href="" download></a>
+        </div>
+    </main>
+    <script src="camerascript.js"></script>
+</body>
