@@ -14,11 +14,7 @@ var recordedChunks = [];
 function controlRecording(key) {
   if (key == 0) {
     
-    alert("Checking navigator.mediaDevices.getUserMedia");
-    
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      
-      alert("Starting Streaming");
       
       navigator.mediaDevices.getUserMedia({ audio:true, video: true }).then(function (stream) {
         video.srcObject = stream;
@@ -27,8 +23,6 @@ function controlRecording(key) {
         startVideo.hidden = true;
         stopVideo.hidden = false;
         
-        alert("Starting Media Recording");
-
         mediaRecorder = new MediaRecorder(stream, options);
 
         mediaRecorder.start();
