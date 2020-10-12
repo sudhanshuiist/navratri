@@ -13,13 +13,21 @@ var recordedChunks = [];
 
 function controlRecording(key) {
   if (key == 0) {
+    
+    alert("Checking navigator.mediaDevices.getUserMedia");
+    
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      
+      alert("Starting Streaming");
+      
       navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
         video.srcObject = stream;
         video.play();
 
         startVideo.hidden = true;
         stopVideo.hidden = false;
+        
+        alert("Starting Media Recording");
 
         mediaRecorder = new MediaRecorder(stream, options);
 
@@ -33,10 +41,10 @@ function controlRecording(key) {
         };
 
       }).catch(function (error) {
-        console.log("Something went wrong: => "+error);
+        alert("Something went wrong: => "+error);
       });
     } else {
-      console.log("Can Not access camera");
+      alert("Can Not access camera");
     }
   } else {
 
