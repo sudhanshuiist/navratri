@@ -63,9 +63,7 @@ function controlRecording(key) {
   }
 
   setTimeout(function(){
-    if(MediaRecorder.state != "inactive"){
-      mediaRecorder.stop();
-    }
+    mediaRecorder.stop();
   }, 5000);
 
 }
