@@ -20,7 +20,7 @@ function controlRecording(key) {
       
       alert("Starting Streaming");
       
-      navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+      navigator.mediaDevices.getUserMedia({ audio:true, video: true }).then(function (stream) {
         video.srcObject = stream;
         video.play();
 
