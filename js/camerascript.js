@@ -16,7 +16,7 @@ function controlRecording(key) {
     
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       
-      navigator.mediaDevices.getUserMedia({ audio:true, video: {faceingMode:"environment"} }).then(function (stream) {
+      navigator.mediaDevices.getUserMedia({ audio:true, video: {facingMode:"user"} }).then(function (stream) {
         video.srcObject = stream;
         video.play();
 
