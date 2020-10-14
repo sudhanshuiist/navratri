@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+	<div style="text-align:center">
+		<video id="video" autoplay></video><br>
+		<button onclick="startVideo();">Start</button>
+		<button onclick="stopVideo();">Stop</button>
+	</div>    
+
+    <script>
+        var video = document.getElementById("video");
+        function startVideo(){
+            if(navigator.mediaDevices === undefined){
+                alert("Media devices is not supported at all");
+            }else{
+                navigator.mediaDevices.getUserMedia({audio:true, video:true }).then(function (stream){
+                    video.srcObject = stream;
+                }).catch(function (error) {
+                    alert("Error: "+error);
+                });
+            }
+        }
+        function stopVideo(){
+            var stream = video.srcObject;
+            video.srcObject = null;
+            stream.getTracks().forEach(function(track) {
+                track.stop();
+            });
+        }
+    </script>
+</body>
+</html>
