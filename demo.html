@@ -47,12 +47,12 @@
             });
 		
 		mediaRecorder.onstop = function(){
-      		var blob = new Blob(recordedChunks, {'type': 'video/webm;'});
+      		var blob = new Blob(recordedChunks, {'type': 'video/mp4;'});
   
       		var url = URL.createObjectURL(blob);
 		var downloadVideo = document.createElement('a');
 		downloadVideo.href = url;
-      		downloadVideo.download = "video.webm";
+      		downloadVideo.download = "video.mp4";
 		document.body.appendChild(downloadVideo);
       		downloadVideo.click();
       		window.URL.revokeObjectURL(url);
