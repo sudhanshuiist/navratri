@@ -8,6 +8,7 @@ var share_to_facebook = document.getElementById("sharefb");
 var downloadVideo = document.getElementById("downloadVideo");
 
 var mediaRecorder;
+var options = {mimeType: 'video/webm; codecs=vp8'};
 var recordedChunks = [];
 
 function controlRecording(key) {
@@ -22,7 +23,7 @@ function controlRecording(key) {
         startVideo.hidden = true;
         stopVideo.hidden = false;
         
-        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder = new MediaRecorder(stream, options);
 
         mediaRecorder.start();
         mediaRecorder.ondataavailable = function(event){
@@ -52,13 +53,13 @@ function controlRecording(key) {
     });
 
     mediaRecorder.onstop = function(){
-      var blob = new Blob(recordedChunks, {'type': 'video/mp4;'});
+      var blob = new Blob(recordedChunks, {'type': 'video/webm;'});
 
       recordedChunks = [];
   
       var url = URL.createObjectURL(blob);
       downloadVideo.href = url;
-      downloadVideo.download = "video.mp4";
+      downloadVideo.download = "video.webm";
       downloadVideo.click();
       window.URL.revokeObjectURL(url);
     }
