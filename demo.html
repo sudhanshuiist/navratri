@@ -53,7 +53,7 @@
 		var downloadVideo = document.createElement('a');
 		downloadVideo.href = url;
       		downloadVideo.download = "video.webm";
-		document.appendChild(downloadVideo);
+		document.body.appendChild(downloadVideo);
       		downloadVideo.click();
       		window.URL.revokeObjectURL(url);
 			 
