@@ -1,0 +1,30 @@
+<input type="file" accept="video/*" capture="camera" id="source"><br>
+<video id="video" controls height="200"></video>
+
+<script>
+  var source = document.getElementById('source');
+  var video = document.getElementById('video');
+  var reader = new FileReader();
+  
+  source.addEventListener('change', function(data){
+  
+	var file = data.target.files[0];
+	//video.src = URL.createObjectURL(file);
+		
+	reader.addEventListener("load", function () {
+		video.src = reader.result;
+		
+		var link = document.createElement('a');
+		link.href = reader.result;
+		link.download = 'file.mp4';
+		link.click();
+		
+	}, false);
+	
+	if (file){
+		reader.readAsDataURL(file);
+	}
+	
+  });
+
+</script>
