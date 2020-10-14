@@ -8,7 +8,7 @@ var share_to_facebook = document.getElementById("sharefb");
 var downloadVideo = document.getElementById("downloadVideo");
 
 var mediaRecorder;
-var options = {mimeType: 'video/webm; codecs=vp9'};
+var options = {mimeType: 'video/webm; codecs=vp8'};
 var recordedChunks = [];
 
 function controlRecording(key) {
